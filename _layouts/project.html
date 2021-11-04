@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+{%- include head.html -%}
+
+<body>
+  {%- include projectListSidebar.html -%}
+  
+  {%- if page.link -%}
+  <div class="iframe pure-u-1 pure-u-md-4-5">
+    <iframe width="100%" height="100%" scrolling="auto" frameborder="0"
+    src="{{ page.link | relative_url }}"></iframe>
+  </div>
+  {%- else -%}
+  <div class="content pure-u-1 pure-u-md-4-5">
+    {{ content }}
+  </div>
+  {%- endif -%}
+</div>
+</body>
+
+</html>
